@@ -1,0 +1,31 @@
+LiFlix Movies
+<mat-divider></mat-divider>
+<div style="padding: 13px;" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]">
+   <mat-spinner *ngIf="products.length === 0"></mat-spinner>
+
+   <mat-card *ngFor="let product of products" style="margin-top:10px;" class = "tp-card">
+       <mat-card-header>
+           <mat-card-title>{{product.title}}</mat-card-title>
+           <mat-card-subtitle>Year: {{product.year}} Duration: {{product.runtime}}
+           </mat-card-subtitle>
+       </mat-card-header>
+       <mat-card-content>
+           <p>
+               {{product.plot}}
+           </p>
+           <img style="height:100%; width: 100%;" src="{{ product.posterUrl }}"  onError="this.src='https://www.tutorialspoint.com/materialize/src/html5-mini-logo.jpg';" class='tp-header-image'/>
+       </mat-card-content>
+       <mat-card-actions>
+     <button mat-button> Buy</button>
+     <button mat-button>LIKE</button>
+     <button mat-button>SHARE</button>
+     <button mat-button >DETAILS</button>
+     <button mat-button>SUBSCRIBE</button>
+   </mat-card-actions>
+   </mat-card>
+   <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+</div>
+

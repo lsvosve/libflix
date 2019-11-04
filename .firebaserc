@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vlconseil-6a75f": {
+      "hosting": {
+        "libflix": [
+          "vlconseil-6a75f"
+        ]
+      }
+    }
+  }
+}
